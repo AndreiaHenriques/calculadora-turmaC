@@ -12,7 +12,7 @@
 </head>
 <body>
     <div>
-    <h1 style="color:aquamarine"Calculadora + Completa></h1>
+        <h1 style="color:aquamarine">Calculadora + Completa</h1>
 
         <!-- este objeto envia os dados do formulário para o servidor -->
         <!-- este comentário aparece no cliente (browser)-->
@@ -22,7 +22,7 @@
             <table border="1">
                 <tr>
                     <td colspan="5">
-                        <input type="text" name="visor" readonly="readonly" />
+                        <input type="text" name="visor" readonly="readonly" value="@ViewBag.Visor"/>
                     </td>
                 </tr>
                 <tr>
@@ -34,6 +34,9 @@
                     </td>
                     <td>
                         <input type="submit" value="9" name="bt" />
+                    </td>
+                    <td>
+                        <input type="submit" value=":" name="bt" />
                     </td>
                     <td>
                         <input type="submit" value="+/-" name="bt" />
@@ -69,8 +72,6 @@
                     <td>
                         <input type="submit" value="-" name="bt" />
                     </td>
-                </tr>
-                <tr>
                     <td rowspan="2">
                         <input type="submit" value="=" name="bt" />
                     </td>
