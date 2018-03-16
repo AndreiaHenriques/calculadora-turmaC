@@ -9,82 +9,144 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <!--CSS-->
+    <style>
+
+        table {
+            background:linear-gradient(midnightblue, #079aef);
+            padding: 10px;
+            border-radius:8px;   
+        }
+
+        input {
+            width: 50px;
+            height: 50px;
+            font-family: sans-serif;
+            border: 0px;
+            border-radius:12px;  
+            
+        }
+
+        #visor {
+            font-size: 20px;
+            background: linear-gradient(#555151, #6d6868);
+            width: 265px;
+            text-align: right;
+            margin: 2px;
+            color: white;
+            padding:5px;
+        }
+
+        #igual {
+            font-size: 20px;
+            background: linear-gradient(#0c0c58,#5f5fe2 );
+            height: 104px;
+            color: white;
+        }
+
+        #valZ {
+            font-size: 25px;
+            background-color: dodgerblue;
+            width: 104px;
+            background: linear-gradient(#555151, #d8d5d5);
+            color: #4d4a4a;
+        }
+
+        #valC {
+            font-size: 20px;
+            background: linear-gradient(#00ffff, #15a7e9);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .nums {
+            font-size: 25px;
+            color: #4d4a4a;
+            background: linear-gradient(#555151, #d8d5d5);
+        }
+
+        .simb {
+            font-size: 20px;
+            background: linear-gradient(#06405a, #15a7e9);
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1 style="color:aquamarine">Calculadora + Completa</h1>
+        <h1 style="color:midnightblue">Calculadora + Completa</h1>
 
         <!-- este objeto envia os dados do formulário para o servidor -->
         <!-- este comentário aparece no cliente (browser)-->
         @* mas este comentário já não aparece... *@
         <form method="post">
 
-            <table border="1">
+            <table>
                 <tr>
                     <td colspan="5">
-                        <input type="text" name="visor" readonly="readonly" value="@ViewBag.Visor"/>
+                        <input id="visor" type="text" name="visor" readonly="readonly" value="@ViewBag.Visor"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="7" name="bt" />
+                        <input class="nums" type="submit" value="7" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="8" name="bt" />
+                        <input class="nums" type="submit" value="8" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="9" name="bt" />
+                        <input class="nums" type="submit" value="9" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value=":" name="bt" />
+                        <input class="simb" type="submit" value=":" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="+/-" name="bt" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="4" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="5" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="6" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="X" name="bt" />
-                    </td>
-                    <td>
-                        <input type="submit" value="C" name="bt" />
+                        <input class="simb" type="submit" value="+/-" name="bt" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="1" name="bt" />
+                        <input class="nums" type="submit" value="4" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="2" name="bt" />
+                        <input class="nums" type="submit" value="5" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="3" name="bt" />
+                        <input class="nums" type="submit" value="6" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="-" name="bt" />
+                        <input class="simb" type="submit" value="x" name="bt" />
+                    </td>
+                    <td>
+                        <input id="valC" type="submit" value="c" name="bt" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="nums" type="submit" value="1" name="bt" />
+                    </td>
+                    <td>
+                        <input class="nums" type="submit" value="2" name="bt" />
+                    </td>
+                    <td>
+                        <input class="nums" type="submit" value="3" name="bt" />
+                    </td>
+                    <td>
+                        <input class="simb" type="submit" value="-" name="bt" />
                     </td>
                     <td rowspan="2">
-                        <input type="submit" value="=" name="bt" />
+                        <input id="igual" type="submit" value="=" name="bt" />
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="0" name="bt" />
+                        <input id="valZ" type="submit" value="0" name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="," name="bt" />
+                        <input class="simb" type="submit" value="," name="bt" />
                     </td>
                     <td>
-                        <input type="submit" value="+" name="bt" />
+                        <input class="simb" type="submit" value="+" name="bt" />
                     </td>
                 </tr>
 

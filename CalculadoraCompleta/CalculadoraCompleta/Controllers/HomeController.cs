@@ -9,7 +9,7 @@ namespace CalculadoraCompleta.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        [HttpGet] //esta anotação é facultativa, pois, por defeito, é isto que
+        [HttpGet] //esta anotação é facultativa
         public ActionResult Index()
         {
             //inializar o valor do visor
